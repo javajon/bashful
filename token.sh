@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# This script copies the bearer token for accessing the Kuberentes dashboard to your clipboard. 
+# This will work if your local kubectl has admin access to your Kubernetes cluster.
+
 # To install the default Kubernetes dashboard into your cluster use the Helm chart:
 # helm upgrade --install kubernetes-dashboard --namespace kube-system  stable/kubernetes-dashboard --set fullnameOverride="kubernetes-dashboard" > /dev/null 2>&1
 # 
