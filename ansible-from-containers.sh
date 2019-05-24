@@ -11,4 +11,5 @@
 #  example 1: `source <(wget -q -O- https://raw.githubusercontent.com/javajon/bashful/master/ansible-from-containers.sh)`
 #  example 2: `. ./ansible-from-containers.sh`
 
-alias cansible='docker run --rm -it -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/.ssh/id_rsa --workdir=/ansible willhallonline/ansible:2.7-alpine '
+alias     cansible='docker run --rm -it -v $(pwd):/ansible -v ~/.ssh/id_rsa:/root/.ssh/id_rsa --workdir=/ansible ansible/ansible-runner:1.3.4'
+alias ansible-lint='docker run --rm -it -v ${PWD}:/mnt:ro haxorof/ansible-lint'
