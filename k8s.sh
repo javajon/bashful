@@ -2,7 +2,7 @@
 
 # Aliases for the common Kubernetes CLI commands.
 
-alias k='kubectl $@'
+alias kc='kubectl $@'
 source <(kubectl completion bash)
 if [[ $(type -t compopt) = "builtin" ]]; then
     complete -o default -F __start_kubectl k
@@ -10,7 +10,7 @@ else
     complete -o default -o nospace -F __start_kubectl k
 fi
 
-alias h='helm $@'
+alias hm='helm $@'
 source <(helm completion bash)
 if [[ $(type -t compopt) = "builtin" ]]; then
     complete -o default -F __start_helm h
