@@ -40,9 +40,9 @@ git config --global core.preloadindex true
 git config --global core.fscache true
 git config --global gc.auto 256
 
-alias gw='./gradlew'
-alias mk='minikube'
-alias kc='kubectl'
+alias gw='./gradlew $@'
+alias mk='minikube $@'
+alias kc='kubectl $@'
 
 # Kubernetes
 source <(kubectl completion bash)
