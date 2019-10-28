@@ -34,20 +34,27 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias gw='./gradlew'
 
 # Git Bash performance
 git config --global core.preloadindex true
 git config --global core.fscache true
 git config --global gc.auto 256
 
-alias gw='./gradlew'
+# Kubernetes
 alias mk='minikube'
 alias kc='kubectl'
 
-# Kubernetes
-source <(kubectl completion bash)
-source <(helm completion bash)
-source <(minikube completion bash)
+# Completions 
+# (some are routed to scratch file due to missing /dev/fd on git bash Windows)
+source $HOME/bash_completion.bash
+source $HOME/.kube/kubectl_autocompletion
+kubectl completion bash > completion-scratch.txt
+source completion-scratch.txt
+helm completion bash > completion-scratch.txt
+source completion-scratch.txt
+minikube completion bash > completion-scratch.txt
+source completion-scratch.txt
 eval "$(minikube docker-env --shell bash)"
 
 calculate_prompt_elements() {
