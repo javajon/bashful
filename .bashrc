@@ -41,9 +41,15 @@ git config --global core.preloadindex true
 git config --global core.fscache true
 git config --global gc.auto 256
 
+<<<<<<< HEAD
 # Kubernetes
 alias mk='minikube'
 alias kc='kubectl'
+=======
+alias gw='./gradlew $@'
+alias mk='minikube $@'
+alias kc='kubectl $@'
+>>>>>>> 402bfb1320118470aaa2b79e5616ef3132896203
 
 # Completions 
 # (some are routed to scratch file due to missing /dev/fd on git bash Windows)
